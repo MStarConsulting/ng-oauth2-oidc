@@ -2270,42 +2270,25 @@ DefaultOAuthInterceptor.ctorParameters = function () { return [
 function createDefaultStorage() {
     return (typeof sessionStorage !== 'undefined') ? sessionStorage : null;
 }
-var OAuthModule = (function () {
-    function OAuthModule() {
+
+
+@NgModule({
+    imports: [CommonModule],
+    declarations: [],
+    exports: [],
+    providers: [
+        OAuthService,
+        UrlHelperService,
+        { provide: OAuthStorage, useFactory: createDefaultStorage },
+        { provide: OAuthResourceServerErrorHandler, useClass: OAuthNoopResourceServerErrorHandler },
+        { provide: OAuthModuleConfig, useValue: null },
+        { provide: HTTP_INTERCEPTORS, useClass: DefaultOAuthInterceptor, multi: true }
+    ]
+})
+class OAuthModule {
+    constructor() {
+
     }
-    /**
-     * @param {?=} config
-     * @return {?}
-     */
-    OAuthModule.forRoot = function (config) {
-        //const setupInterceptor = config && config.resourceServer && config.resourceServer.allowedUrls;
-        if (config === void 0) { config = null; }
-        return {
-            ngModule: OAuthModule,
-            providers: [
-                OAuthService,
-                UrlHelperService,
-                { provide: OAuthStorage, useFactory: createDefaultStorage },
-                { provide: OAuthResourceServerErrorHandler, useClass: OAuthNoopResourceServerErrorHandler },
-                { provide: OAuthModuleConfig, useValue: config },
-                { provide: HTTP_INTERCEPTORS, useClass: DefaultOAuthInterceptor, multi: true }
-            ]
-        };
-    };
-    return OAuthModule;
-}());
-OAuthModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    CommonModule
-                ],
-                declarations: [],
-                exports: []
-            },] },
-];
-/**
- * @nocollapse
- */
-OAuthModule.ctorParameters = function () { return []; };
+}
 
 export { createDefaultStorage, OAuthModule, OAuthService, JwksValidationHandler, NullValidationHandler, ValidationHandler, AbstractValidationHandler, UrlHelperService, AuthConfig, LoginOptions, OAuthStorage, ReceivedTokens, AUTH_CONFIG, OAuthEvent, OAuthSuccessEvent, OAuthInfoEvent, OAuthErrorEvent, DefaultOAuthInterceptor, OAuthResourceServerErrorHandler, OAuthNoopResourceServerErrorHandler, OAuthModuleConfig, OAuthResourceServerConfig };
