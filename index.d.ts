@@ -1,4 +1,3 @@
-import { ModuleWithProviders } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/filter';
@@ -20,8 +19,6 @@ export * from './events';
 export * from './interceptors/default-oauth.interceptor';
 export * from './interceptors/resource-server-error-handler';
 export * from './oauth-module.config';
-import { OAuthModuleConfig } from "./oauth-module.config";
 export declare function createDefaultStorage(): Storage;
 export declare class OAuthModule {
-    static forRoot(config?: OAuthModuleConfig): ModuleWithProviders;
 }
