@@ -48,8 +48,8 @@
   "module": "angular-oauth2-oidc.js",
   "name": "angular-oauth2-oidc",
   "peerDependencies": {
-    "@angular/core": ">= 4.3.0 < 6",
-    "@angular/common": ">= 4.3.0 < 6",
+    "@angular/core": ">= 4.3.0",
+    "@angular/common": ">= 4.3.0",
     "rxjs": ">= 5.1.0",
     "zone.js": ">= 0.8.4"
   },
