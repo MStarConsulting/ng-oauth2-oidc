@@ -1,32 +1,4 @@
 {
-  "_args": [
-    [
-      "angular-oauth2-oidc@3.1.4",
-      "C:\\Users\\GCOSTA\\Projects\\sest-web\\src\\SestWeb.Api\\ClientApp"
-    ]
-  ],
-  "_from": "angular-oauth2-oidc@3.1.4",
-  "_id": "angular-oauth2-oidc@3.1.4",
-  "_inBundle": false,
-  "_integrity": "sha1-B3k5VhbXLxXp3985Ld2pxpY3Qug=",
-  "_location": "/angular-oauth2-oidc",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "angular-oauth2-oidc@3.1.4",
-    "name": "angular-oauth2-oidc",
-    "escapedName": "angular-oauth2-oidc",
-    "rawSpec": "3.1.4",
-    "saveSpec": null,
-    "fetchSpec": "3.1.4"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/angular-oauth2-oidc/-/angular-oauth2-oidc-3.1.4.tgz",
-  "_spec": "3.1.4",
-  "_where": "C:\\Users\\GCOSTA\\Projects\\sest-web\\src\\SestWeb.Api\\ClientApp",
   "author": {
     "name": "ManfredSteyer",
     "email": "manfred.steyer@gmx.net"
@@ -44,7 +16,7 @@
     "angular"
   ],
   "license": "MIT",
-  "main": "angular-oauth2-oidc.umd.js",
+  "main": "index.js",
   "module": "angular-oauth2-oidc.js",
   "name": "angular-oauth2-oidc",
   "peerDependencies": {
